@@ -10,19 +10,19 @@ type Subscriber struct {
 }
 
 func PrintInfo(s *Subscriber) {
-	fmt.Println("Name:", s.name)
-	fmt.Println("Monthly rate", s.rate)
-	fmt.Println("Active?", s.active)
+	fmt.Println("Name:", s.Name)
+	fmt.Println("Monthly rate", s.Rate)
+	fmt.Println("Active?", s.Active)
 }
 
 func DefaultSubscriber(name string) *Subscriber {
 	var s Subscriber
-	s.name = name
-	s.rate = 5.99
-	s.active = true
+	s.Name = name
+	s.Rate = 5.99
+	s.Active = true
 	return &s
 }
 
 func ApplyDiscount(s *Subscriber) {
-	s.rate = 4.99 // 使用点运算符在struct指针和struct上都可访问字段
+	s.Rate = 4.99 // 使用点运算符在struct指针和struct上都可访问字段
 }
